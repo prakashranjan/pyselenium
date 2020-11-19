@@ -17,13 +17,20 @@ driver=webdriver.Chrome(r"../browsers/chromedriver")
 #maximize the window size  
 driver.maximize_window()  
 #navigate to the url  
-driver.get("https://www.google.com/")  
+driver.get("https://www.instagram.com/?hl=en")  
 #identify the Google search text box and enter the value  
-driver.find_element_by_name("q").send_keys("javatpoint")  
+time.sleep(3)
+driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[5]/button/span[2]').click()
+time.sleep(3)
+driver.find_element_by_name("email").send_keys("prs786") 
+driver.find_element_by_name("pass").send_keys("chapal") 
+driver.find_element_by_name("login").click()
+time.sleep(5)  
+driver.find_element_by_xpath("/html/body/div[4]/div/div/div/div[3]/button[2]").click()
+# #click on the Google search button  
+# driver.find_element_by_name("btnK").send_keys(Keys.ENTER)  
+# time.sleep(3)  
+#close the browser
 time.sleep(3)  
-#click on the Google search button  
-driver.find_element_by_name("btnK").send_keys(Keys.ENTER)  
-time.sleep(3)  
-#close the browser  
 driver.close()  
 print("sample test case successfully completed")  
