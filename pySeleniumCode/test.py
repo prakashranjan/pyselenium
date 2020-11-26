@@ -3,7 +3,7 @@ from selenium.webdriver.chrome.options import Options
 import time  
 from selenium.webdriver.common.keys import Keys  
 print("sample test case started")  
-#driver = webdriver.Chrome() 
+driver = webdriver.Chrome() 
 chrome_options = Options()
 #chrome_options.add_argument("--disable-extensions")
 #chrome_options.add_argument("--disable-gpu")
@@ -11,7 +11,7 @@ chrome_options = Options()
 chrome_options.add_argument("--headless")
 # chrome_options.headless = True # also works
 #driver=webdriver.Chrome(r"../browsers/chromedriver",options=chrome_options) 
-driver=webdriver.Chrome(r"../browsers/chromedriver")   
+# driver=webdriver.Chrome(r"../browsers/chromedriver")   
 #driver=webdriver.firefox()  
 #driver=webdriver.ie()  
 #maximize the window size  
